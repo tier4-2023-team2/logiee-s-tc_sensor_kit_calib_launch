@@ -11,10 +11,10 @@
     </include>
   </group>
 
-  <group>
+  <!-- <group>
     <push-ros-namespace namespace="sensors"/>
     <include file="$(find-pkg-share extrinsic_calibration_manager)/launch/$(var sensor_model)/manual_sensors.launch.xml">
       <arg name="vehicle_id" value="$(var vehicle_id)"/>
     </include>
-  </group>
+  </group> -->
 </launch>

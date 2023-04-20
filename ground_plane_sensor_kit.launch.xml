@@ -3,14 +3,13 @@
   <arg name="vehicle_id" default="default"/>
   <let name="sensor_model" value="logiee-s-tc_sensor_kit"/>
   <let name="base_frame" value="base_link"/>
-  <!-- <let name="parent_frame" value="sensor_kit_base_link"/> -->
-  <let name="parent_frame" value="base_link"/>
+  <let name="parent_frame" value="sensor_kit_base_link"/>
+  <!-- <let name="parent_frame" value="base_link"/> -->
   <let name="rviz_profile" value="$(find-pkg-share extrinsic_ground_plane_calibrator)/rviz/velodyne_top.rviz"/>
   <arg name="rviz" default="true"/>
 
   <!-- extrinsic_calibration_client -->
-  <!-- <arg name="src_yaml" default="$(find-pkg-share individual_params)/config/$(var vehicle_id)/$(var sensor_model)/sensor_kit_calibration.yaml"/> -->
-  <arg name="src_yaml" default="$(find-pkg-share individual_params)/config/$(var vehicle_id)/$(var sensor_model)/sensors_calibration.yaml"/>
+  <arg name="src_yaml" default="$(find-pkg-share individual_params)/config/$(var vehicle_id)/$(var sensor_model)/sensor_kit_calibration.yaml"/>
   <arg name="dst_yaml" default="$(env HOME)/sensor_kit_calibration_out.yaml"/>
 
   <node pkg="extrinsic_calibration_client" exec="extrinsic_calibration_client" name="extrinsic_calibration_client" output="screen">
